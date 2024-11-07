@@ -1,0 +1,248 @@
+
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Helvetica Neue', sans-serif; /* More professional font */
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #2a3b4c, #1f2d3a); /* Darker tones for a sleek look */
+  color: #e4e4e4; /* Lighter text for readability */
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  background: #34495e; /* Darker header for contrast */
+  padding: 2em 1em; /* Adjust padding for mobile */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Softer shadow for depth */
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: #f39c12; /* Subtle gold tone for a touch of elegance */
+  font-weight: 700;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+#button-id {
+  padding-top: 1em;
+  display: block; /* Ensures the button is a block element */
+  margin: 1em auto; /* Horizontally centers the button */
+  text-align: center; /* Ensures the text inside the button is also centered */
+}
+
+#toggle-format {
+  background-color: #f39c12;
+  border-radius: 8px;
+  transition: background 0.3s;
+  font-size: 1.1em; /* Ensure it matches the size of other buttons */
+  padding: 0.8em 1.5em; /* Matching padding to make it flush */
+  z-index: 10;
+  margin: 1em auto; /* Horizontally center it */
+}
+
+#toggle-format:hover {
+  background-color: #e67e22;
+}
+
+/* Main Content */
+main {
+  padding: 3em 1em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #f39c12; /* Gold accent for headings */
+  font-size: 2em;
+  margin-bottom: 1.5em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Sections */
+#world-clock, #time-zone-section, #converter {
+  margin-bottom: 3em;
+  background: rgba(255, 255, 255, 0.1); /* Soft contrast background for sections */
+  padding: 2em;
+  border-radius: 12px; /* Slightly rounded corners for modern look */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Time Zone Section */
+#time-zone-section {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* City and Saved Time Zones */
+#cities, #saved-zones {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+.city, .saved {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5em;
+  border-radius: 12px;
+  width: 200px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.city:hover, .saved:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+/* Adjust font size of h3 dynamically based on space in .saved */
+.saved h3 {
+  font-size: calc(1.2em + 0.3vw); /* Responsive font size */
+  color: #f39c12;
+  text-align: center;
+  overflow: hidden; /* Prevents overflow */
+  word-wrap: break-word;
+  white-space: normal;
+  max-width: 100%;
+}
+
+/* Search Input */
+#search-input {
+  padding: 0.8em;
+  width: 100%;
+  max-width: 500px;
+  margin: 1.5em auto;
+  border: 1px solid #7f8c8d;
+  border-radius: 8px;
+  font-size: 1.1em;
+  background: rgba(255, 255, 255, 0.1);
+  color: #e4e4e4;
+}
+
+#search-input::placeholder {
+  color: #bdc3c7;
+}
+
+/* Search Results */
+#search-results {
+  margin-top: 1.5em;
+}
+
+.search-result {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.7em;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0.7em 0;
+  transition: background 0.3s;
+}
+
+.search-result:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Buttons */
+button {
+  padding: 0.8em 1.2em;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #3a78c3;
+  transform: translateY(-2px);
+}
+
+/* Conversion Section */
+label {
+  display: block;
+  margin-top: 1.2em;
+  font-weight: 500;
+  color: #bdc3c7;
+}
+
+input[type="time"], input[list] {
+  width: calc(100% - 20px);
+  max-width: 450px;
+  padding: 0.8em;
+  margin: 0.7em 0;
+  border: 1px solid #7f8c8d;
+  border-radius: 8px;
+  font-size: 1.1em;
+  background: rgba(255, 255, 255, 0.1);
+  color: #e4e4e4;
+}
+
+/* Conversion Result */
+#conversion-result {
+  margin-top: 1.5em;
+  font-size: 1.3em;
+  color: #e4e4e4;
+}
+
+/* Footer */
+footer {
+  background: #34495e;
+  padding: 1.5em;
+  margin-top: 3em;
+  color: #bdc3c7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 1.7em;
+  }
+
+  .city, .saved {
+    width: 180px;
+  }
+
+  #toggle-format {
+    font-size: 1.1em; /* Ensuring button text is same size as other buttons */
+    padding: 0.8em 1.5em; /* Adjust padding for better fit */
+    margin: 1em auto; /* Center the button */
+    top: unset; /* Remove fixed positioning */
+    right: unset; /* Remove fixed positioning */
+    display: block; /* Make it behave like other buttons */
+  }
+
+  /* Adjust padding and font sizes for mobile */
+  main {
+    padding: 2em 1em;
+  }
+
+  .saved h3 {
+    font-size: calc(1.1em + 0.3vw);
+  }
+
+  #search-input {
+    max-width: 100%;
+  }
+
+  /* Stack elements vertically on smaller screens */
+  #cities, #saved-zones {
+    flex-direction: column;
+    align-items: center;
+  }
+}

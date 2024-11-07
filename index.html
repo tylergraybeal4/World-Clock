@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock</title>
+    <link rel="icon" type="image/png" href="https://github.com/tylergraybeal4/World-Clock/blob/main/Untitled%20design%20(57).png?raw=true" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+      <h1>World Clock</h1>
+    </header>
+    <div id="button-id">
+      <button id="toggle-format">Switch to 24-Hour Format</button>
+    </div>
+    <main>
+        <section id="world-clock">
+            <h2>World Clock</h2>
+            <div id="cities"></div>
+        </section>
+        
+        <section id="time-zone-section">
+            <h2>Search for a Time Zone</h2>
+            <input type="text" id="search-input" placeholder="Search for a city or time zone...">
+            <div id="search-results"></div>
+
+            <h2>My Saved Time Zones:</h2>
+            <div id="saved-zones"></div>
+        </section>
+
+        <section id="converter">
+            <h2>Time Zone Converter</h2>
+            <label for="from-timezone">From:</label>
+            <input list="from-timezone-list" id="from-timezone" name="from-timezone">
+            <datalist id="from-timezone-list"></datalist>
+            <br>
+            <label for="to-timezone">To:</label>
+            <input list="to-timezone-list" id="to-timezone" name="to-timezone">
+            <datalist id="to-timezone-list"></datalist>
+            <br>
+            <label for="convert-time">Time:</label>
+            <input type="time" id="convert-time" name="convert-time">
+            <br>
+            <button id="convert-btn">Convert</button>
+            <p id="conversion-result"></p>
+        </section>
+
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 World Time Converter</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
